@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder</title>
+
+
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--header -->
+<header class="header">
+    <div class="header__primary">
+        <a href="#" class="header__logo"><i class="fas fa-book"></i> Book Search </a>
+
+
+
+        <form class="header__search-form" id="searchForm">
+            <select class="header__sort-by" id="sortOptions">
+                <option value="author" selected>Sort by Author</option>
+                <option value="title">Sort by Title</option>
+                <option value="genre">Sort by Genre</option>
+            </select>
+            <input type="text" id="search-box" name="searchQuery" placeholder="Search for books..." required>
+            <button type="submit" id="search-btn" class="header__search-button fas fa-search" onclick="location.href='#matchingResults'"></button>
+        </form>
+
+
+        <div class="header__icon">
+
+            <div id="login-btn" class="header__login fas fa-user">
+                <label for="login-btn" class="header__login-label">Sign In</label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="header__nav">
+        <nav class="navbar">
+            <a href="index.html" class="navbar__link">Home</a>
+            <a href="#featured-books" class="navbar__link">Featured Books</a>
+            <a href="#reviews" class="navbar__link">Reviews</a>
+            <a href="#new" class="navbar__link">New Books</a>
+
+        </nav>
+    </div>
+
+</header>
+
+<!--header section ends -->
+
+
+<!--banner section -->
+<div class="image-container">
+    <img class="image-container__img" src="images/banner1.jpg" alt="Image">
+    <div class="image-container__caption" id="firstcaption">
+        <h1 class="image-container__title">Infinite Books, One Search</h1>
+        <p class="image-container__description">Dive into a world of books tailored just for you.</p>
+    </div>
+</div>
+
+<!--banner section ends -->
+
+<!--featured books-->
+
+<h2 id="featuredBooksHeading">Featured Books</h2>
+<div  class="book-images" id="featured-books">
+
+    <a href="book-details.html?id=1">
+        <img src="images/1.jpg" class="book-image" id="1" alt="To Kill a Mockingbird">
+    </a>
+    <a href="book-details.html?id=2">
+        <img src="images/2.jpg" class="book-image" id="2" alt="1984">
+    </a>
+    <a href="book-details.html?id=3">
+        <img src="images/3.jpg" class="book-image" id="3" alt="Pride and Prejudice">
+    </a>
+
+    <a href="book-details.html?id=4">
+        <img src="images/4.jpg" class="book-image" id="4" alt="The Great Gatsby">
+    </a>
+
+    <a href="book-details.html?id=5">
+        <img src="images/5.jpg" class="book-image" id="5" alt="Moby-Dick">
+    </a>
+
+    <a href="book-details.html?id=6">
+        <img src="images/6.jpg" class="book-image" id="6" alt="War and Peace">
+    </a>
+
+    <a href="book-details.html?id=7">
+        <img src="images/7.jpg" class="book-image" id="7" alt="The Catcher in the Rye">
+    </a>
+
+    <a href="book-details.html?id=8">
+        <img src="images/8.jpg" class="book-image" id="8" alt="The Hobbit">
+    </a>
+
+    <a href="book-details.html?id=9">
+        <img src="images/9.jpg" class="book-image" id="9" alt="Ulysses">
+    </a>
+    <a href="book-details.html?id=10">
+        <img src="images/10.jpg" class="book-image" id="10" alt="The Oddyssey">
+    </a>
+
+
+</div>
+
+
+<!--botton navbar-->
+<div class="bottom-nav">
+    <nav class="bottom-nav__navbar">
+        <a href="index.html" class=" bottom-nav__link bottom-nav__link--home fas fa-home"></a>
+        <a href="#featured-books" class="bottom-nav__link bottom-nav__link--list fas fa-list"></a>
+        <a href="#reviews" class="bottom-nav__link bottom-nav__link--comments fas fa-comments"></a>
+        <a href="#new"><i class="bottom-nav__link bottom-nav__link--blogs fas fa-blog"></i></a>
+    </nav>
+</div>
+
+
+<!--login form -->
+
+<div class="login-form-container">
+
+    <div class="login-form-container__close-btn fas fa-times" id="close-login-btn"></div>
+
+    <form action="" class="login-form-container__form">
+        <h3 class="login-form-container__form-title">Sign in</h3>
+        <span class="login-form-container__form-label">username</span>
+        <input type="email" name="" class="login-form-container__form-input box" placeholder="Enter your email" id="email">
+        <span class="login-form-container__form-label">password</span>
+        <input type="password" name="" class="login-form-container__form-input box" placeholder="Enter your password" id="password">
+        <div class="login-form-container__form-checkbox checkbox">
+            <input type="checkbox" name="" id="remember-me" class="login-form-container__form-checkbox-input">
+            <label for="remember-me" class="login-form-container__form-checkbox-label">Remember me</label>
+        </div>
+        <input type="submit" value="Sign In" class="login-form-container__form-btn btn">
+        <p class="login-form-container__form-forgot">Forget Password ?<a href="#">Click Here</a></p>
+        <p class="login-form-container__form-create">Don't have and account ?<a href="#">Create One</a></p>
+
+    </form>
+
+</div>
+
+<!--reviews -->
+<section class="reviews" id="reviews">
+    <h1 class="reviews__heading"> <span>Reviews from Our Readers</span></h1>
+    <div class="reviews-slider">
+
+        <div class="reviews__wrap">
+            <div class="reviews__box">
+                <img class="reviews__image" src="images/reader7.jpg">
+                <h3>Emili Maneska</h3>
+                <p class="reviews__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+                <div class="reviews__stars">
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="reviews__box">
+                <img src="images/reader6.jpg" class="reviews__image">
+                <h3>Jovan Davidoski</h3>
+                <p class="reviews__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+                <div class="reviews__stars">
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+
+
+
+            <div class="reviews__box">
+                <img src="images/reader8.jpg" class="reviews__image">
+                <h3>Lara Stamatoska</h3>
+                <p class="reviews__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+                <div class="reviews__stars">
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+
+            <div class="reviews__box">
+                <img src="images/reader9.jpg" class="reviews__image">
+                <h3>Ivan Ivanov</h3>
+                <p class="reviews__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+                <div class="reviews__stars">
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="reviews__box">
+                <img src="images/reader10.jpg" class="reviews__image">
+                <h3>Zoran Janevski</h3>
+                <p class="reviews__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+                <div class="reviews__stars">
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star"></i>
+                    <i class="reviews__star fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--newbooks -->
+<section class="new-books" id="new">
+    <div class="new-books__row">
+
+        <div class="new-books__content">
+            <h3 class="new-books__heading">Discover Fresh Adventures: Dive into Our Newest Books!</h3>
+            <p class="new-books__description">
+                Explore a world of literary wonders with our collection of new books.
+                From thrilling adventures to captivating stories, find your next favorite read and immerse yourself in a journey of imagination and discovery
+            </p>
+        </div>
+
+        <div class="new-books__slider">
+
+            <div class="new-books__wrapper">
+                <a href="#"><img src="images/1.jpg" class="new-books__slide"></a>
+                <a href="#"><img src="images/2.jpg" class="new-books__slide"></a>
+                <a href="#"><img src="images/3.jpg" class="new-books__slide"></a>
+                <a href="#"><img src="images/4.jpg" class="new-books__slide"></a>
+                <a href="#"><img src="images/5.jpg" class="new-books__slide"></a>
+                <a href="#"><img src="images/6.jpg" class="new-books__slide"></a>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--subscribe -->
+<section class="newsletter">
+    <form class="newsletter__form" action="">
+        <h3 class="newsletter__heading">Subscribe for the latest updates</h3>
+        <input type="email" name="" placeholder="Enter you email" class="newsletter__input--email box" id="" >
+        <input type="submit" value="subscribe" class="newsletter__input--submit btn">
+    </form>
+</section>
+
+
+
+
+
+<!--matching results-->
+
+<div class="container" id="matchingResults"></div>
+
+
+
+    <!--footer-->
+    <footer>
+
+        <p><b>Follow us on</b> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg>  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+        </svg></p>
+        <p id="rights">&copy; 2024 Book Search. All rights reserved!
+        </p>
+
+    </footer>
+
+
+
+
+
+
+<script src="script.js"></script>
+<script src="book-details.js"></script>
+</body>
+</html>
