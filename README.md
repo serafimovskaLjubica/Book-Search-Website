@@ -1,17 +1,17 @@
 # Book-Search-Website
 Welcome to the Book Search Website! This README file provides clear instructions on how to set up and run the webpage locally.
 
-Table of Contents
- -Running the Website
-   -Using WebStorm
- -Usage
- -Features
- -Contributing
- -Live Website
+Table of Contents <br />
+ -Running the Website <br />
+   -Using WebStorm <br />
+ -Usage <br />
+ -Features <br />
+ -Contributing <br />
+ -Live Website <br />
 
 
-Running the Website - Using WebStorm ( or other code editor)
-1.Open WebStorm.
+Running the Website - Using WebStorm ( or other code editor) <br />
+1.Open WebStorm. <br />
 2.Go to File -> New -> Project from Version Control.
 3.Enter the URL of the repository:
 https://github.com/serafimovskaLjubica/Book-Search-Website.git
