@@ -3,7 +3,6 @@ Welcome to the Book Search Website! This README file provides clear instructions
 
 Table of Contents <br />
  -Running the Website <br />
-   -Using WebStorm <br />
  -Usage <br />
  -Features <br />
  -Contributing <br />
